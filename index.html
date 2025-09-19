@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshay Jagtap - Data Analyst</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__brand">
+                <a href="#home" class="nav__logo">Akshay Jagtap</a>
+            </div>
+            <ul class="nav__menu" id="nav-menu">
+                <li class="nav__item">
+                    <a href="#home" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#about" class="nav__link">About</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#experience" class="nav__link">Experience</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#projects" class="nav__link">Projects</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#skills" class="nav__link">Skills</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#contact" class="nav__link">Contact</a>
+                </li>
+            </ul>
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <h1 class="hero__title">AKSHAY JAGTAP</h1>
+                    <h2 class="hero__subtitle">DATA ANALYST</h2>
+                    <p class="hero__location">
+                        <i class="fas fa-map-marker-alt"></i> Bengaluru
+                        <span class="separator">|</span>
+                        <i class="fas fa-envelope"></i> akshay.jagtap.we@gmail.com
+                        <span class="separator">|</span>
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                        <span class="separator">|</span>
+                        <i class="fas fa-phone"></i> +919168099819
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#about" class="btn btn--primary">Learn More</a>
+                        <a href="#contact" class="btn btn--secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="hero__shape">
+                        <div class="shape-element shape-1"></div>
+                        <div class="shape-element shape-2"></div>
+                        <div class="shape-element shape-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Summary Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Summary</h2>
+            </div>
+            <div class="about__content">
+                <p class="about__text">
+                    Data Analyst with 4 years of experience driving adoption, engagement, and quality insights for AI Assistants across Cisco products. Skilled at defining metrics, uncovering user behavior patterns, and delivering insights that shaped adoption strategies and new feature development. Strong in Python, SQL, Tableau, Databricks, A/B testing, with a proven record of building dashboards and scalable datasets for leadership decision-making.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Professional Experience</h2>
+            </div>
+
+            <div class="timeline">
+                <!-- Cisco Experience -->
+                <div class="timeline__item">
+                    <div class="timeline__marker"></div>
+                    <div class="timeline__content">
+                        <div class="timeline__header">
+                            <h3 class="timeline__title">Data Analyst (AI Team)</h3>
+                            <div class="timeline__meta">
+                                <span class="timeline__company">Cisco</span>
+                                <span class="timeline__period">Aug 2023 – Present</span>
+                            </div>
+                        </div>
+                        <ul class="timeline__list">
+                            <li>Led end-to-end development of executive-level analytics for AI Assistants across multiple Cisco products, building 5+ Tableau dashboards (adoption, customer overview, AI quality, LLM deep-dive, user intent) serving stakeholders including senior leadership</li>
+                            <li>Partnered with product and data engineering teams to ingest product telemetry into Databricks/Snowflake; built complex SQL custom tables; created new features and curated tables powering self-serve analytics</li>
+                            <li>Automated user-intent classification using LLMs in Python notebooks, categorizing 100K+ assistant prompts into prioritized themes; exposed live intent trends in Tableau to guide ML training and product roadmap decisions</li>
+                            <li>Launched 'In-Context Nudges' feature after identifying adoption gaps; coordinated implementation with engineering, set up Amplitude instrumentation, and delivered 20% lift in user engagement through experiment analysis</li>
+                            <li>Improved data governance by establishing region-specific data residency across workspaces; orchestrated dbt pipelines to unify regional data tables while maintaining compliance and dashboard stability</li>
+                            <li>Delivered monthly executive readouts on assistant adoption and engagement metrics, informing roadmap and investment decisions for senior product leadership</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Armorblox Experience -->
+                <div class="timeline__item">
+                    <div class="timeline__marker"></div>
+                    <div class="timeline__content">
+                        <div class="timeline__header">
+                            <h3 class="timeline__title">Data Analyst</h3>
+                            <div class="timeline__meta">
+                                <span class="timeline__company">Armorblox</span>
+                                <span class="timeline__period">Jan 2022 – July 2023</span>
+                            </div>
+                        </div>
+                        <ul class="timeline__list">
+                            <li>Developed and deployed custom regex patterns to detect malicious HTML attachments in emails, improving in-production phishing and malware detection accuracy</li>
+                            <li>Collaborated with the ML engineering team to integrate new detection rules into the production model pipeline, strengthening email security coverage for enterprise clients</li>
+                            <li>Automated pseudo-labeling pipeline in Python(snorkel), reducing manual effort by 50%</li>
+                            <li>Built phishing analytics dashboards for threat classification and security monitoring</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Projects</h2>
+            </div>
+
+            <div class="projects__grid">
+                <!-- Zomato Project -->
+                <div class="project__card">
+                    <div class="project__header">
+                        <h3 class="project__title">Zomato – "Zomato Streak" Loyalty Program</h3>
+                        <span class="project__category">(Upraised PM Program)</span>
+                    </div>
+                    <div class="project__content">
+                        <p>Designed and documented the "Zomato Streak" gamified loyalty feature to recover a 10% drop in orders from ex-Pro users by rewarding progressive milestones (5/10/15 orders in 30 days), directly targeting a 20% high-value user segment to boost retention and revenue.</p>
+                        <p>Defined success metrics, risks, and rollout strategy (north star: +10% revenue from ex-Pro users), aligning product, marketing, and compliance teams around measurable adoption and profitability goals.</p>
+                    </div>
+                </div>
+
+                <!-- Amazon Project -->
+                <div class="project__card">
+                    <div class="project__header">
+                        <h3 class="project__title">Amazon Mini TV – "Bites" Preview Feature</h3>
+                        <span class="project__category">(Upraised PM Program)</span>
+                    </div>
+                    <div class="project__content">
+                        <p>Authored PRD and RICE prioritization for the "Bites" swipe-up video preview feed, addressing low content awareness (80% unaware) and user drop-off by improving discoverability and engagement.</p>
+                        <p>Outlined adoption, engagement, and revenue KPIs (e.g., previews watched, ad impressions, new users via shares) and crafted a go-to-market plan with beta testing to validate user behavior before full rollout.</p>
+                    </div>
+                </div>
+
+                <!-- Expense Policy Project -->
+                <div class="project__card">
+                    <div class="project__header">
+                        <h3 class="project__title">Insights for Expense policy Suggestion Feature</h3>
+                        <span class="project__category">Analytics Project</span>
+                    </div>
+                    <div class="project__content">
+                        <p>Designed and engineered custom feature-engineering tables from raw transactional and policy data, enabling robust analysis of 40+ organizations' expense behaviors.</p>
+                        <p>Performed correlation and segmentation analysis to identify high-impact customer groups, generating actionable insights that informed prioritization of the Expense Policy Suggestion feature rollout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Technical Skills</h2>
+            </div>
+
+            <div class="skills__grid">
+                <div class="skill__category">
+                    <div class="skill__header">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages/Tools</h3>
+                    </div>
+                    <div class="skill__content">
+                        <p>SQL, Python, Tableau, Amplitude, Power BI.</p>
+                    </div>
+                </div>
+
+                <div class="skill__category">
+                    <div class="skill__header">
+                        <i class="fas fa-database"></i>
+                        <h3>Data Platforms</h3>
+                    </div>
+                    <div class="skill__content">
+                        <p>Snowflake, BigQuery, Data bricks, AWS</p>
+                    </div>
+                </div>
+
+                <div class="skill__category">
+                    <div class="skill__header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Techniques</h3>
+                    </div>
+                    <div class="skill__content">
+                        <p>Cohort Analysis, A/B Testing, User Behaviour Analysis, Funnel Analysis, EDA</p>
+                    </div>
+                </div>
+
+                <div class="skill__category">
+                    <div class="skill__header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Other Skills</h3>
+                    </div>
+                    <div class="skill__content">
+                        <p>Data Modelling, ETL, PRDs, Technical Documentation, Product analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Additional Info Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Education & Additional Information</h2>
+            </div>
+
+            <div class="education__content">
+                <div class="education__section">
+                    <h3 class="education__heading">Education</h3>
+                    <div class="education__items">
+                        <div class="education__item">
+                            <div class="education__degree">PGDM (MBA) - Business Analytics</div>
+                            <div class="education__details">
+                                <span class="education__school">Welingkar Institute of Management and Research, Bengaluru.</span>
+                                <span class="education__period">Jul 18 - May 20</span>
+                            </div>
+                        </div>
+                        <div class="education__item">
+                            <div class="education__degree">BE - Electrical Engineering</div>
+                            <div class="education__details">
+                                <span class="education__school">NBN Sinhgad School of Engineering, Pune.</span>
+                                <span class="education__period">Jun 13 - May 16</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="additional__info">
+                    <div class="info__section">
+                        <h3 class="info__heading">Languages</h3>
+                        <p>English, Hindi, Marathi</p>
+                    </div>
+
+                    <div class="info__section">
+                        <h3 class="info__heading">Certifications</h3>
+                        <ul class="info__list">
+                            <li>IBM AI Product Manager (Coursera) - 2025</li>
+                            <li>Product Management (Upraised) - 2024</li>
+                            <li>Agile with Atlassian Jira - 2022</li>
+                        </ul>
+                    </div>
+
+                    <div class="info__section">
+                        <h3 class="info__heading">Awards/Activities</h3>
+                        <ul class="info__list">
+                            <li>Cisco "You Inspire" Award (2024)</li>
+                            <li>Product Analytics Recognition (2024)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">Get In Touch</h2>
+            </div>
+
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>akshay.jagtap.we@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+919168099819</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>Connect with me on LinkedIn</p>
+                        </div>
+                    </div>
+                    <div class="contact__item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Bengaluru, India</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__form">
+                    <form id="contact-form">
+                        <div class="form__group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <p>&copy; 2025 Akshay Jagtap. All rights reserved.</p>
+                <p>Data Analyst | Bengaluru, India</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
