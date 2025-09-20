@@ -104,10 +104,14 @@ body {
 }
 
 .hero__content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
+    display: flex;
     align-items: center;
+    gap: 2rem;
+    width: 100%;
+}
+
+.hero__text {
+    flex: 1;
 }
 
 .hero__title {
@@ -116,6 +120,9 @@ body {
     color: #1e40af;
     margin-bottom: 0.5rem;
     line-height: 1.1;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .hero__subtitle {
@@ -188,55 +195,78 @@ body {
     transform: translateY(-2px);
 }
 
-/* Hero Visual */
-.hero__visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Enhanced Professional Profile Picture */
+.hero__photo {
     position: relative;
+    margin-left: auto;
+    flex-shrink: 0;
 }
 
-.hero__shape {
-    width: 350px;
-    height: 350px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.shape-element {
-    position: absolute;
+.hero__image {
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
+    object-fit: cover;
+    object-position: center;
+
+    /* Enhanced professional border and shadow */
+    border: 5px solid white;
+    box-shadow: 
+        0 0 0 3px #1e40af,  /* Blue border */
+        0 10px 30px rgba(30, 64, 175, 0.2),  /* Blue shadow */
+        0 5px 15px rgba(0, 0, 0, 0.1);  /* Subtle dark shadow */
+
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.shape-1 {
-    width: 300px;
-    height: 300px;
-    background: linear-gradient(135deg, #1e40af, #3b82f6);
+.hero__image:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 0 0 4px #3b82f6,  /* Brighter blue border on hover */
+        0 15px 40px rgba(30, 64, 175, 0.3),  /* Stronger blue shadow */
+        0 8px 25px rgba(0, 0, 0, 0.15);  /* Stronger dark shadow */
+}
+
+/* Professional glow effect around photo */
+.hero__photo::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: linear-gradient(45deg, #1e40af, #3b82f6, #60a5fa, #1e40af);
+    border-radius: 50%;
+    z-index: -1;
     opacity: 0.1;
+    animation: profileGlow 4s ease-in-out infinite alternate;
 }
 
-.shape-2 {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(45deg, #3b82f6, #60a5fa);
-    opacity: 0.2;
-    animation-delay: -2s;
+/* Subtle rotating ring effect */
+.hero__photo::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 2px solid transparent;
+    border-top: 2px solid rgba(30, 64, 175, 0.3);
+    border-right: 2px solid rgba(30, 64, 175, 0.3);
+    border-radius: 50%;
+    z-index: -1;
+    animation: profileRotate 8s linear infinite;
 }
 
-.shape-3 {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(225deg, #60a5fa, #93c5fd);
-    opacity: 0.3;
-    animation-delay: -4s;
+@keyframes profileGlow {
+    0% { opacity: 0.05; transform: scale(0.98); }
+    100% { opacity: 0.15; transform: scale(1.02); }
 }
 
-@keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(5deg); }
+@keyframes profileRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 /* Section Styles */
@@ -701,13 +731,15 @@ section {
     }
 
     .hero__content {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         text-align: center;
         gap: 2rem;
     }
 
     .hero__title {
+        flex-direction: column;
         font-size: 2.5rem;
+        gap: 1rem;
     }
 
     .hero__subtitle {
@@ -722,6 +754,11 @@ section {
     .hero__location {
         justify-content: center;
         text-align: center;
+    }
+
+    .hero__image {
+        width: 150px;
+        height: 150px;
     }
 
     .timeline::before {
@@ -755,26 +792,6 @@ section {
         gap: 2rem;
     }
 
-    .hero__shape {
-        width: 250px;
-        height: 250px;
-    }
-
-    .shape-1 {
-        width: 200px;
-        height: 200px;
-    }
-
-    .shape-2 {
-        width: 140px;
-        height: 140px;
-    }
-
-    .shape-3 {
-        width: 80px;
-        height: 80px;
-    }
-
     .section__title {
         font-size: 2rem;
     }
@@ -803,6 +820,16 @@ section {
 
     .hero__subtitle {
         font-size: 1rem;
+    }
+
+    .hero__image {
+        width: 120px;
+        height: 120px;
+        border: 4px solid white;
+        box-shadow: 
+            0 0 0 2px #1e40af,
+            0 8px 20px rgba(30, 64, 175, 0.2),
+            0 4px 10px rgba(0, 0, 0, 0.1);
     }
 
     .btn {
