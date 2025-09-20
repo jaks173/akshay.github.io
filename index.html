@@ -1,5 +1,4 @@
-# Create updated HTML with original image and "Portfolio" in navigation
-html_with_original_photo = '''<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -47,7 +46,12 @@ html_with_original_photo = '''<!DOCTYPE html>
         <div class="container">
             <div class="hero__content">
                 <div class="hero__text">
-                    <h1 class="hero__title">AKSHAY JAGTAP</h1>
+                    <div class="hero__title">
+                        AKSHAY JAGTAP
+                        <div class="hero__photo">
+                            <img src="IMG_3117.jpg" alt="Akshay Jagtap - Data Analyst" class="hero__image">
+                        </div>
+                    </div>
                     <h2 class="hero__subtitle">DATA ANALYST</h2>
                     <p class="hero__location">
                         <i class="fas fa-map-marker-alt"></i> Bengaluru
@@ -61,11 +65,6 @@ html_with_original_photo = '''<!DOCTYPE html>
                     <div class="hero__buttons">
                         <a href="#about" class="btn btn--primary">Learn More</a>
                         <a href="#contact" class="btn btn--secondary">Get In Touch</a>
-                    </div>
-                </div>
-                <div class="hero__visual">
-                    <div class="hero__photo">
-                        <img src="IMG_3117.jpg" alt="Akshay Jagtap - Data Analyst" class="hero__image">
                     </div>
                 </div>
             </div>
@@ -92,7 +91,7 @@ html_with_original_photo = '''<!DOCTYPE html>
             <div class="section__header">
                 <h2 class="section__title">Professional Experience</h2>
             </div>
-            
+
             <div class="timeline">
                 <!-- Cisco Experience -->
                 <div class="timeline__item">
@@ -145,7 +144,7 @@ html_with_original_photo = '''<!DOCTYPE html>
             <div class="section__header">
                 <h2 class="section__title">Projects</h2>
             </div>
-            
+
             <div class="projects__grid">
                 <!-- Zomato Project -->
                 <div class="project__card">
@@ -192,7 +191,7 @@ html_with_original_photo = '''<!DOCTYPE html>
             <div class="section__header">
                 <h2 class="section__title">Technical Skills</h2>
             </div>
-            
+
             <div class="skills__grid">
                 <div class="skill__category">
                     <div class="skill__header">
@@ -243,7 +242,7 @@ html_with_original_photo = '''<!DOCTYPE html>
             <div class="section__header">
                 <h2 class="section__title">Education & Additional Information</h2>
             </div>
-            
+
             <div class="education__content">
                 <div class="education__section">
                     <h3 class="education__heading">Education</h3>
@@ -264,13 +263,13 @@ html_with_original_photo = '''<!DOCTYPE html>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="additional__info">
                     <div class="info__section">
                         <h3 class="info__heading">Languages</h3>
                         <p>English, Hindi, Marathi</p>
                     </div>
-                    
+
                     <div class="info__section">
                         <h3 class="info__heading">Certifications</h3>
                         <ul class="info__list">
@@ -279,7 +278,7 @@ html_with_original_photo = '''<!DOCTYPE html>
                             <li>Agile with Atlassian Jira - 2022</li>
                         </ul>
                     </div>
-                    
+
                     <div class="info__section">
                         <h3 class="info__heading">Awards/Activities</h3>
                         <ul class="info__list">
@@ -298,7 +297,7 @@ html_with_original_photo = '''<!DOCTYPE html>
             <div class="section__header">
                 <h2 class="section__title">Get In Touch</h2>
             </div>
-            
+
             <div class="contact__content">
                 <div class="contact__info">
                     <div class="contact__item">
@@ -330,7 +329,7 @@ html_with_original_photo = '''<!DOCTYPE html>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="contact__form">
                     <form id="contact-form">
                         <div class="form__group">
@@ -368,44 +367,4 @@ html_with_original_photo = '''<!DOCTYPE html>
 
     <script src="app.js"></script>
 </body>
-</html>'''
-
-# Save updated HTML
-with open('index.html', 'w', encoding='utf-8') as f:
-    f.write(html_with_original_photo)
-
-print("✅ HTML updated with:")
-print("   • Navigation changed from 'Akshay Jagtap' to 'Portfolio'")
-print("   • Image source set to 'IMG_3117.jpg' (your original photo)")
-print()
-print("📋 Steps to update your GitHub repository:")
-print()
-print("1. UPLOAD YOUR PHOTO:")
-print("   • Go to your GitHub repository")
-print("   • Click 'Add file' → 'Upload files'") 
-print("   • Drag and drop your IMG_3117.jpg file")
-print("   • Commit the changes")
-print()
-print("2. UPDATE THE CODE:")
-print("   • Replace your current index.html with the updated version")
-print("   • Your style.css and app.js files can stay the same")
-print()
-print("3. WAIT FOR DEPLOYMENT:")
-print("   • GitHub Pages will auto-deploy in 2-3 minutes")
-print("   • Your photo will appear in the hero section")
-print("   • Navigation will show 'Portfolio' instead of 'Akshay Jagtap'")
-
-# Create the final package
-import zipfile
-import os
-
-zip_filename = 'akshay-portfolio-final.zip'
-with zipfile.ZipFile(zip_filename, 'w') as zipf:
-    zipf.write('index.html')
-    # Note: We're not including the image in the zip since user needs to upload it separately
-
-print(f"\n✅ Updated HTML file ready: {zip_filename}")
-print("\n📝 Remember to:")
-print("   • Upload IMG_3117.jpg to your GitHub repository first")
-print("   • Then upload the updated index.html file")
-print("   • Keep your existing style.css and app.js files")
+</html>
