@@ -55,16 +55,11 @@ if (contactForm) {
             return;
         }
 
-        // Create mailto link (since this is a static site)
+        // Create mailto link
         const mailtoLink = `mailto:akshay.jagtap.we@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`From: ${name} (${email})\n\nMessage:\n${message}`)}`;
 
-        // Try to open email client
         window.location.href = mailtoLink;
-
-        // Show success message
         alert('Thank you for your message! Your default email client should open with the message pre-filled.');
-
-        // Reset form
         contactForm.reset();
     });
 }
@@ -82,7 +77,7 @@ window.addEventListener('scroll', () => {
     lastScrollY = window.scrollY;
 });
 
-// Add active class to navigation links based on scroll position
+// Add active class to navigation links
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav__link');
 
@@ -134,27 +129,22 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
-// Simple typing effect for hero title (optional)
-function typeWriter(element, text, speed = 100) {
-    let i = 0;
-    element.innerHTML = '';
-
-    function type() {
-        if (i < text.length) {
-            element.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    }
-
-    type();
-}
-
 // Initialize scroll-triggered animations
 document.addEventListener('DOMContentLoaded', function() {
-    // Add smooth reveal animations to cards
     const cards = document.querySelectorAll('.project__card, .skill__category, .contact__item');
     cards.forEach((card, index) => {
         card.style.animationDelay = `${index * 0.1}s`;
     });
+
+    // Add hover effect to professional photo
+    const heroImage = document.querySelector('.hero__image');
+    if (heroImage) {
+        heroImage.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+
+        heroImage.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    }
 });
